@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Expense Tracker</h1>
+
+  <div class="total"><small>Total spent</small><strong id="total">₹0</strong></div>
+
+  <form id="form" autocomplete="off">
+    <input id="title" placeholder="What did you spend on? (e.g. Chai)" required maxlength="60" aria-label="Expense title">
+    <div class="row">
+      <input id="amount" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="Amount (₹)" required aria-label="Amount">
+      <select id="category" aria-label="Category">
+        <option>Food</option><option>Travel</option><option>Study</option><option>Other</option>
+      </select>
+    </div>
+    <button class="add" type="submit">Add expense</button>
+  </form>
+
+  <h2>By category</h2>
+  <div class="cats" id="cats"></div>
+
+  <h2>All expenses</h2>
+  <ul id="list"></ul>
+
+  <button class="reset" id="reset" type="button">Clear all expenses</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
